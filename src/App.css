@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.heading{
+  color:red;
+  font-weight: 600;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 .App-header {
   background-color: #282c34;
