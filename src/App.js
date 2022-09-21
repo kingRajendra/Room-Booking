@@ -1,10 +1,10 @@
 import './App.css';
-import Hotel from './Hotel'
+import Hotel from './Hotel';
 
 function App() {
   return (
 
-    <header className="App-header">
+    <header>
       <Hotel />
     </header>
 
