@@ -1,87 +1,154 @@
-.App {
+.heading {
+  color: whitesmoke;
+  font-style: italic;
+  font-weight: 100;
+  margin: auto;
+  font-size: 50px;
   text-align: center;
-}
-
-.heading{
-  color:red;
-  font-weight: 600;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card {
+  background-color: #f6c56e;
+  border-radius: 16px;
+  margin:auto;
+  text-align: center;
+  margin-top: 20px;
+  width:35%;
+  padding: 24px;
+}
+
+
+.room-card {
+  background-color:wheat;
+  border-radius: 16px;
+  margin-left:20px;
+  text-align: center;
+  margin-top: 20px;
+  width:15%;
+  padding: 24px;
+}
+
+
+.card2 {
+  background-color:wheat;
+  border-radius: 16px;
+  margin-left:30px;
+  text-align: center;
+  margin-top: 20px;
+  width:25%;
+  height: 25%;
+  padding: 24px;
 }
 
 .button {
-  max-width: "20px";
-  min-width: "15px";
-  border: "2px solid black";
-  min-height: "20px";
-  border-radius: "5px";
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 60%;
+}
+
+.button1 {
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30%;
+}
+
+
+
+.names {
+  font-size: 28px;
+  font-weight: 800;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #282c34;
+}
+
+.naming {
+  font-size: 28px;
+  text-align:center;
+  font-weight: 800;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #282c34;
+}
+
+.head {
+  color: navy;
+  font-size:25px;
+  font-style: oblique;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.select {
+  margin: 5px;
 }
 
 .text {
+  font-size: 22px;
+  color:red;
+  padding: auto;
+  margin-top: 20px;
+  border-radius:25px;
   text-align: center;
-  font-size:15px;
-  font-weight: 100;
-  color: #282c34;
 }
-.head {
-  text-align: center;
-  color: aqua;
-}
+
 
 .col {
   display: flex;
-  flex-direction:row;
-  margin-left:5px;
-  padding:15px;
-
+  flex-direction: column;
 }
 
 .row {
   display: flex;
-  flex-direction:row;
-  margin-left:5px;
-  padding:15px;
-} 
-
-.text2 {
-  color:#26da20;
-  font-weight: 500;
-  font-size:15px;
-  padding:5px;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.text3 {
-  color: wheat;
-  font-size:12px;
-  font-family: 'Courier New', Courier, monospace;
+.main {
+  background-color: green;
+  height: 1000vh;
 }
+
+.text1 {
+  font-size: 22px;
+  color:red;
+  padding: auto;
+  width: 20%;
+  margin-top: 10px;
+  border-radius:25px;
+  text-align: center;
+}
+
+
 
 .reset {
   background-color: red;
-  font-size:20px;
+  font-size: 20px;
   font-weight: 300;
   color: white;
   border: #282c34;
 }
 
 .apply {
-  background-color:blue;
-  font-size:20px;
+  background-color: blue;
+  font-size: 20px;
   font-weight: 300;
   color: white;
   border: #282c34;
 }
 
 span {
-  color: aqua;
+  color:darkorange;
 }
