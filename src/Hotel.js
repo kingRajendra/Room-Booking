@@ -65,7 +65,7 @@ export default function Hotel() {
     //Reset 
 
     const handleReset = () => {
-        setAdults(2);
+        setAdults(1);
         setRooms(1);
         setChildren(0);
 
@@ -113,120 +113,105 @@ export default function Hotel() {
         setGuestNumber(children + adults);
         setRoomNumber(rooms);
     };
+
     return (
-        <>
-            <h1 className='heading'>Hotel Room</h1>
-            <div className='col'>
-                <h3 className='head'>Rooms</h3>
+        <div className="main">
+            <h1 className='heading'>Hotel Reservation</h1>
+            <div className="card">
+                <h1 className="names">Rooms <span className='span'>{rooms}</span> & Guests <span>{children + adults}</span></h1>
+            </div>
+            <div className='room-card'>
+                <h1 className='naming'>Rooms {rooms}</h1>
                 <div className="row">
                     <div>
-                        <button className="button" disabled={rooms === 0} onClick={handleRoomsReduce}>-</button>
-                    </div>
-                    <div>
-                        <input className='text' onChange={handleRoomsChange} value={rooms.toString()} type="text" />
-                    </div>
-                    <div>
-                        <button className="button" disabled={rooms === 10} onClick={handleRoomsAdd}>+</button>
-                    </div>
-                </div>
-                <h3 className='head'>Adult</h3>
-                <div className="row">
-                    <div>
-                        <button className="button" disabled={adults === 1} onClick={handleAdultsReduce}>-</button>
-                    </div>
-                    <div>
-                        <input className='text' onChange={handleAdultsChange} value={adults.toString()} type="text" />
-                    </div>
-                    <div>
-                        <button className="button" disabled={adults === 12} onClick={handleAdultsAdd}>+</button>
-                    </div>
-                </div>
-                <div className = "col">
-                <h3 className='head'>Children</h3>
-                <div className="row">
-                    <div>
-                        <button className="button" disabled={children === 0} onClick={handleChildrenReduce}>-</button>
-                    </div>
-                    <div>
-                        <input className='text' onChange={handleChildrenChange} value={children.toString()} type="text" />
-                    </div>
-                    <div>
-                        <button className="button" disabled={children === 5} onClick={handleChildrenAdd}>+</button>
-                    </div>
-                </div>
-                {childrenArr.length >= 1 && (
-                    <div children={children}>
-                        <span className='text2'>CHILD AGE  <span className='text3'>12y and below</span></span>
-                    </div>
-                )}
-                <div children={children}>
-                    {childrenArr.map((el, index) => {
-                        console.log(index);
-                        return (
-                            <select className='select'
-                                onChange={handleChildrenAge}
-                                defaultValue={0}
-                                name={`${index + 1}select`}
-
-                            >
-                                <option value={0}>0</option>
-                                <option value={1}>1</option>
-                                <option value={2}>2</option>
-                                <option value={3}>3</option>
-                                <option value={4}>4</option>
-                                <option value={5}>5</option>
-                                <option value={6}>6</option>
-                                <option value={7}>7</option>
-                                <option value={8}>8</option>
-                                <option value={9}>9</option>
-                                <option value={10}>10</option>
-                                <option value={11}>11</option>
-                                <option value={12}>12</option>
-                            </select>
-                        );
-                    })}
+                        <button className="button" disabled={rooms === 0} onClick={handleRoomsReduce}>Remove</button>
                     </div>
 
-                    {roomArr.length >= 1 && (
-                        <div rooms={rooms}>
-                            <span className='text2'>ROOM</span>
-                        </div>
-                    )}
-                </diV>
-
-
-                <div>
-
-                </div>
-                <div>
-                    {rooms >= 6 && (
-                        <div rooms={rooms}>
-                            <p className='text3'>Big group? Try for 6+ rooms</p>
-                        </div>
-                    )}
-                </div>
-
-
-                <div>
-                    <div children={children}>
-                        <div>
-                            <button onClick={handleReset} className="reset">
-                                Reset
-                            </button>
-                        </div>
-                        <div>
-
-                            <button onClick={handleApply} className="apply">
-                                Apply
-                            </button>
-                            <h1 className='total'>Rooms  <span>{rooms} </span>&  Guests <span>{adults + children}</span></h1>
-                        </div>
+                    <div>
+                        <button className="button" disabled={rooms === 10} onClick={handleRoomsAdd}>Add </button>
                     </div>
                 </div>
             </div>
 
-        </>
-    );
+            <div room={rooms}>
+                {roomArr.map((el, index) => {
+                    console.log(index);
+                    return ( 
+            
+                            <div className='room-card'>
+                                <h1>Room: {index + 1}</h1>
+                                <div className="row">
+                                    <div className='col'>
+                                        <h3 className='head'>Adults</h3>
+                                        <div className="row">
+                                            <div>
+                                                <button className="button1" disabled={adults === 1} onClick={handleAdultsReduce}>-</button>
+                                            </div>
+                                            <div>
+                                                <input className='text1' onChange={handleAdultsChange} value={adults.toString()} type="text" />
+                                            </div>
+                                            <div>
+                                                <button className="button1" disabled={adults === 12} onClick={handleAdultsAdd}>+</button>
+                                            </div>
+                                            <div>
+                                                {adults >= 10 && (
+                                                    <div adults={adults}>
+                                                        <p className='text1'>Maximum Members</p>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                        <h3 className='head'>Children</h3>
+                                        <div className="row">
+                                            <div>
+                                                <button className="button1" disabled={children === 0} onClick={handleChildrenReduce}>-</button>
+                                            </div>
+                                            <div>
+                                                <input className='text1' onChange={handleChildrenChange} value={children.toString()} type="text" />
+                                            </div>
+                                            <div>
+                                                <button className="button1" disabled={children === 5} onClick={handleChildrenAdd}>+</button>
+                                            </div>
+                                        </div>
+                                        <div children={children}>
+                                            {childrenArr.map((el, index) => {
+                                                console.log(index);
+                                                return (
+                                                    <select className='select'
+                                                        onChange={handleChildrenAge}
+                                                        defaultValue={0}
+                                                        name={`${index + 1}select`}
 
+                                                    >
+                                                        <option value={0}>0</option>
+                                                        <option value={1}>1</option>
+                                                        <option value={2}>2</option>
+                                                        <option value={3}>3</option>
+                                                        <option value={4}>4</option>
+                                                        <option value={5}>5</option>
+                                                        <option value={6}>6</option>
+                                                        <option value={7}>7</option>
+                                                        <option value={8}>8</option>
+                                                        <option value={9}>9</option>
+                                                        <option value={10}>10</option>
+                                                        <option value={11}>11</option>
+                                                        <option value={12}>12</option>
+                                                    </select>
+                                                    
+                                                
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+
+                    )
+                })}
+            </div>
+
+        </div>
+
+    )
 }
-
