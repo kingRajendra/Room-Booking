@@ -3,6 +3,30 @@ import React from "react";
 import { useState,useEffect } from "react";
 
 
+export default function Hotel() {
+
+    const [rooms, setRooms] = useState([])
+
+    return (
+        <div className="main">
+            <h1 className='heading'>Hotel Reservation</h1>
+            <div className="card">
+                <h1 className="names">Rooms</h1>
+            </div>
+            <Room/>
+             {rooms}
+            <div className='room-card'>
+                <div className="row">
+                    <div>
+                        <button className="button" onClick={() => setRooms([...rooms, <Room/>])}>Add Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
 const Room = () => {
 
     const [state, setState] = useState({});
@@ -129,25 +153,4 @@ const Room = () => {
     )
 }
 
-export default function Hotel() {
 
-    const [rooms, setRooms] = useState([])
-
-    return (
-        <div className="main">
-            <h1 className='heading'>Hotel Reservation</h1>
-            <div className="card">
-                <h1 className="names">Rooms</h1>
-            </div>
-            <Room/>
-             {rooms}
-            <div className='room-card'>
-                <div className="row">
-                    <div>
-                        <button className="button" onClick={() => setRooms([...rooms, <Room/>])}>Add Room</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
