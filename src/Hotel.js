@@ -9,11 +9,11 @@ export default function Hotel() {
 
     return (
         <div className="main">
-            <h1 className='heading'>Hotel Reservation</h1>
+            <h1 className='heading'>Hotel Room Booking</h1>
             <div className="card">
                 <h1 className="names">Rooms</h1>
             </div>
-            <Room/>
+            <Rooms/>
              {rooms}
             <div className='room-card'>
                 <div className="row">
