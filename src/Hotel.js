@@ -18,7 +18,7 @@ export default function Hotel() {
             <div className='room-card'>
                 <div className="row">
                     <div>
-                        <button className="button" onClick={() => setRooms([...rooms, <Room/>])}>Add Room</button>
+                        <button className="button" onClick={() => setRooms([...rooms, <Rooms/>])}>Add Room</button>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@ export default function Hotel() {
 }
 
 
-const Room = () => {
+const Rooms = () => {
 
     const [state, setState] = useState({});
     const [adults, setAdults] = useState(1);
